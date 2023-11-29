@@ -25,7 +25,7 @@ export default function Formulario(props: FormularioProps) {
     const [status, setStatus] = useState(props.veiculo?.status)
 
     return (
-        <div>
+        <div style={{ maxHeight: '75vh' }} className="overflow-y-auto">
             {id ? (<Entrada texto="id" valor={id} somenteLeitura></Entrada>) : false}
             <Entrada texto="Placa" valor={placa} onChange={setPlaca}></Entrada>
             <Entrada texto="Nome" valor={nome} onChange={setNome}></Entrada>
@@ -38,7 +38,17 @@ export default function Formulario(props: FormularioProps) {
             <Entrada texto="KM Rodado" valor={kmRodado} onChange={setKmRodado}></Entrada>
             <Entrada texto="Fabricante" valor={fabricante} onChange={setFabricante}></Entrada>
             <Entrada texto="Tipo do veiculo" valor={tipoVeiculo} onChange={setTipoVeiculo}></Entrada>
-            <Entrada texto="Status" valor={status} onChange={setStatus}></Entrada>
+            <div className="flex items-center mt-4">
+                <label className="text-sm text-gray-600">Status:</label>
+                <select
+                    value={status}
+                    onChange={(e) => setStatus(e.target.value)}
+                    className="ml-2 p-2 border border-gray-300 rounded-md"
+                >
+                    <option value="EMESTOQUE">Disponivel</option>
+                    <option value="VENDIDO">Vendido</option>
+                </select>
+            </div>
             <div className="flex justify-end mt-5">
                 <Botao className="mr-3" cor="bg-gradient-to-r from-blue-500 to-blue-700"
                     onClick={() => props.veiculoMudou?.(new Veiculo(

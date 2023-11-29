@@ -99,8 +99,8 @@ export default function Pessoas() {
             </div>
             <div className="overflow-x-auto">
               <Tabela pessoas={pessoas}
-                pessoaSelecionado={pessoaSelecionado}
-                pessoaExcluido={pessoaExcluido}></Tabela>
+                pessoaSelecionada={pessoaSelecionado}
+                pessoaExcluida={pessoaExcluido}></Tabela>
             </div>
           </>
         ) : (

@@ -12,6 +12,8 @@ return (
  <a href="/veiculos" className="text-lg no-underline hover:text-amber-300 ml-2">
  Veiculos</a>
  <a href="/pessoas" className="text-lg no-underline hover:text-amber-300 ml-2">
- Pessoas</a></div>
+ Pessoas</a>
+ <a href="/vendas" className="text-lg no-underline hover:text-amber-300 ml-2">
+ Vendas</a></div>
  </nav>
 </>);}
