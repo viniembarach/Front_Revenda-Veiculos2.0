@@ -84,9 +84,9 @@ export default function Veiculos() {
 
   return (
     <div className={`
-     flex justify-center items-center h-screen
-     bg-gradient-to-bl from-indigo-900 via-indigo-400 to-indigo-900
-     text-white`}>
+      flex justify-center items-center h-screen
+      bg-gradient-to-bl from-indigo-900 via-indigo-400 to-indigo-900
+      text-white`}>
       <Layout titulo="Cadastro de veiculos">
         {visivel === 'tabela' ? (
           <>
@@ -96,9 +96,11 @@ export default function Veiculos() {
                 Novo veiculo
               </Botao>
             </div>
-            <Tabela veiculos={veiculos}
-              veiculoSelecionado={veiculoSelecionado}
-              veiculoExcluido={veiculoExcluido}></Tabela>
+            <div className="overflow-x-auto">
+              <Tabela veiculos={veiculos}
+                veiculoSelecionado={veiculoSelecionado}
+                veiculoExcluido={veiculoExcluido}></Tabela>
+            </div>
           </>
         ) : (
           <Formulario veiculo={veiculo}

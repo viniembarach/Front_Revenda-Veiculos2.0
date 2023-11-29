@@ -10,6 +10,8 @@ return (
  <a href="/" className="text-lg no-underline hover:text-amber-300 ml-2">
  Home</a>
  <a href="/veiculos" className="text-lg no-underline hover:text-amber-300 ml-2">
- Veiculos</a></div>
+ Veiculos</a>
+ <a href="/pessoas" className="text-lg no-underline hover:text-amber-300 ml-2">
+ Pessoas</a></div>
  </nav>
 </>);}
