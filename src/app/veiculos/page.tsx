@@ -35,14 +35,14 @@ export default function Veiculos() {
     setVisivel('form')
   }
 
-  async function veiculoExcluido(evento: Veiculo) {
-    const confirmacao = window.confirm("Tem certeza de que deseja excluir este evento?");
+  async function veiculoExcluido(veiculo: Veiculo) {
+    const confirmacao = window.confirm("Tem certeza de que deseja excluir este Veiculo?");
     if (confirmacao) {
       try {
         if (veiculo.id !== null) {
           await excluirVeiculo(veiculo.id);
         } else {
-          console.error("eventoId é null!");
+          console.error("veiculoId é null!");
         }
         setVeiculos(prevVeiculos => prevVeiculos.filter(ev => ev.id !== veiculo.id));
       } catch (error) {
