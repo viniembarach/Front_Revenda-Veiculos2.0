@@ -22,7 +22,7 @@ export default function Formulario(props: FormularioProps) {
     const [role, setRole] = useState(props.pessoa?.role)
 
     return (
-        <div style={{ maxHeight: '75vh' }} className="overflow-y-auto">
+        <div style={{ maxHeight: '75vh' }} className="formularios">
             {id ? (<Entrada texto="id" valor={id} somenteLeitura></Entrada>) : false}
             <Entrada texto="CPF/CNPJ" valor={cpfoucnpj} onChange={setCpfoucnpj}></Entrada>
             <Entrada texto="Nome" valor={nome} onChange={setNome}></Entrada>

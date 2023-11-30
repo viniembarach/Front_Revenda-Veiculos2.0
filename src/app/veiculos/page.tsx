@@ -83,10 +83,7 @@ export default function Veiculos() {
   }
 
   return (
-    <div className={`
-      flex justify-center items-center h-screen
-      bg-gradient-to-bl from-indigo-900 via-indigo-400 to-indigo-900
-      text-white`}>
+    <div className={"tabela"}>
       <Layout titulo="Cadastro de veiculos">
         {visivel === 'tabela' ? (
           <>

@@ -18,7 +18,7 @@ export default function Formulario(props: FormularioProps) {
     const [vendedor, setVendedor] = useState(props.venda?.vendedor)
 
     return (
-        <div>
+        <div className="formularios">
             {id ? (<Entrada texto="id" valor={id} somenteLeitura></Entrada>) : false}
             <Entrada texto="Data da Venda" tipo="date" valor={stringParaEntradaDeData(dataVenda)} onChange={setDataVenda}></Entrada>
             <Entrada texto="Veiculo" valor={veiculo} onChange={setVeiculo}></Entrada>

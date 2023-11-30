@@ -7,7 +7,7 @@ import Venda from "@/app/core/Venda";
 import { atualizarVenda, cadastrarVenda, excluirVenda, fetchVendas } from "@/app/service/vendaService";
 import { useEffect, useState } from "react";
 
-export default function vendas() {
+export default function Vendas() {
 
   const [venda, setVenda] = useState<Venda>(Venda.vazio())
   const [visivel, setVisivel] = useState<'tabela' | 'form'>('tabela')
@@ -83,10 +83,7 @@ export default function vendas() {
   }
 
   return (
-    <div className={`
-      flex justify-center items-center h-screen
-      bg-gradient-to-bl from-indigo-900 via-indigo-400 to-indigo-900
-      text-white`}>
+    <div className={`tabela`}>
       <Layout titulo="Cadastro de vendas">
         {visivel === 'tabela' ? (
           <>

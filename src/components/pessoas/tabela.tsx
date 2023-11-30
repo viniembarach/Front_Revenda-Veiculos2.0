@@ -13,7 +13,7 @@ export default function Tabela(props: TabelaProps) {
     function renderHeader() {
         return (
             <tr>
-                <th className="text-left p-3">id</th>
+                <th className="text-left p-3">ID</th>
                 <th className="text-left p-3">CPF/CNPJ</th>
                 <th className="text-left p-3">Nome</th>
                 <th className="text-left p-3">Telefone</th>
@@ -31,17 +31,17 @@ export default function Tabela(props: TabelaProps) {
     function renderDados() {
         return props.pessoas?.map((pessoa, i) => {
             return (
-                <tr key={pessoa.id} className={`${i % 2 === 0 ? 'bg-indigo-200' : 'bg-indigo-100'} `}>
-                    <td className="text-left p-3">{pessoa.id}</td>
-                    <td className="text-left p-3">{pessoa.cpfoucnpj}</td>
-                    <td className="text-left p-3">{pessoa.nome}</td>
-                    <td className="text-left p-3">{pessoa.telefone}</td>
-                    <td className="text-left p-3">{pessoa.cidade}</td>
-                    <td className="text-left p-3">{pessoa.endereco}</td>
-                    <td className="text-left p-3">{pessoa.senha}</td>
-                    <td className="text-left p-3">{pessoa.email}</td>
-                    <td className="text-left p-3">{pessoa.tipo}</td>
-                    <td className="text-left p-3">{pessoa.role}</td>
+                <tr key={pessoa.id} className={`${i % 2 === 0 ? 'tabela_ap' : 'tabela_ap'} `}>
+                    <td className="info_tabelas">{pessoa.id}</td>
+                    <td className="info_tabelas">{pessoa.cpfoucnpj}</td>
+                    <td className="info_tabelas">{pessoa.nome}</td>
+                    <td className="info_tabelas">{pessoa.telefone}</td>
+                    <td className="info_tabelas">{pessoa.cidade}</td>
+                    <td className="info_tabelas">{pessoa.endereco}</td>
+                    <td className="info_tabelas">{pessoa.senha}</td>
+                    <td className="info_tabelas">{pessoa.email}</td>
+                    <td className="info_tabelas">{pessoa.tipo}</td>
+                    <td className="info_tabelas">{pessoa.role}</td>
                     {exibirAcoes ? renderizarAcoes(pessoa) : false}
                 </tr>
             );
@@ -54,9 +54,7 @@ export default function Tabela(props: TabelaProps) {
                 {props.pessoaSelecionada ? (
                     <button
                         onClick={() => props.pessoaSelecionada?.(pessoa)}
-                        className={`flex justify-center items
-                        text-green-600 rounded-full p-2 m-1
-                        hover:bg-gray-100`}
+                        className={`botao_edicao`}
                     >
                         {IconeEdicao}
                     </button>
@@ -64,9 +62,7 @@ export default function Tabela(props: TabelaProps) {
                 {props.pessoaExcluida ? (
                     <button
                         onClick={() => props.pessoaExcluida?.(pessoa)}
-                        className={`flex justify-center items
-                        text-red-600 rounded-full p-2 m-1
-                        hover:bg-gray-100`}
+                        className={`botao_remover`}
                     >
                         {IconeLixo}
                     </button>
@@ -76,9 +72,8 @@ export default function Tabela(props: TabelaProps) {
     }
 
     return (
-        <table className="w-full rounded-xl overflow-hidden">
-            <thead className={`text-gray-100
-            bg-gradient-to-r from-indigo-500 to-indigo-800`}>
+        <table className="tabela_separacao">
+            <thead className={`tabela_cabecalho`}>
                 {renderHeader()}
             </thead>
             <tbody>{renderDados()}</tbody>
