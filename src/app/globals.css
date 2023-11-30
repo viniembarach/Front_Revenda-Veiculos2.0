@@ -1,7 +1,10 @@
+/* globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Adicione ou modifique estilos conforme necessário */
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 255, 255, 255;
@@ -24,4 +27,13 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+/* Adicione ou modifique estilos Tailwind CSS aqui */
+.title {
+  /* Adicione estilos para o título aqui */
+}
+
+.subtitle {
+  /* Adicione estilos para o subtítulo aqui */
 }

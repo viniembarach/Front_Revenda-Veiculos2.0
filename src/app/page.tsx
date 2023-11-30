@@ -1,9 +1,14 @@
-import Image from 'next/image'
+import '../app/globals.css';
 
 export default function Home() {
   return (
-    <div>
-      <h2>Sistema de Revenda de Veiculos</h2>
+    <div className="text-center mt-10">
+      <h2 className="title text-4xl font-bold mb-4">
+        Bem-vindo ao Sistema de Revenda de Veículos
+      </h2>
+      <p className="subtitle text-lg text-gray-600">
+        Gerencie suas vendas, estoque de veículos e clientes de forma eficiente.
+      </p>
     </div>
-  )
+  );
 }
